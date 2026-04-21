@@ -4,6 +4,7 @@ import { ref } from "vue";
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
 mode.value = "dark";
+import logo from "@/assets/logo.png";
 
 import {
   NavigationMenu,
@@ -25,7 +26,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { ChevronsDown, Menu } from "lucide-vue-next";
+import { Menu } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from "./ToggleTheme.vue";
 
@@ -83,18 +84,19 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'w-[86%] md:w-[68%] lg:w-[60%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center py-2 px-4 md:px-4 bg-card shadow-md': true,
     }"
   >
     <a
       href="/"
       class="font-bold text-lg flex items-center"
     >
-      <ChevronsDown
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+      <img
+        :src="logo"
+        alt="ShadcnVue logo"
+        class="mr-2 h-12 w-auto rounded-lg object-contain"
       />
-      ShadcnVue</a
-    >
+      </a>
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
       <Sheet v-model:open="isOpen">
@@ -116,8 +118,10 @@ const isOpen = ref<boolean>(false);
                   href="/"
                   class="flex items-center"
                 >
-                  <ChevronsDown
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
+                  <img
+                    :src="logo"
+                    alt="ShadcnVue logo"
+                    class="mr-2 h-20 w-auto rounded-lg object-contain"
                   />
                   ShadcnVue
                 </a>
