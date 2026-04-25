@@ -27,8 +27,8 @@ import AnimatedBackground from "./components/ui/animation/AnimatedBackground.vue
       <!-- <Benefits /> -->
       <Features />
       <Services />
-      <HowItWorks />
-      <Testimonials />
+      <!-- <HowItWorks /> -->
+      <!-- <Testimonials /> -->
       <Team />
       <Community />
       <Pricing />
