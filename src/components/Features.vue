@@ -23,7 +23,7 @@ const featureList: FeaturesProps[] = [
     icon: "tabletSmartphone",
     title: "Mobile Friendly",
     description:
-    "We build responsive solutions that look sharp, load smoothly, and work perfectly across phones, tablets, and desktops."
+    "Responsive solutions that look sharp, load smoothly, and work perfectly across phones, tablets, and desktops."
       // "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
   },
   {
@@ -36,25 +36,25 @@ const featureList: FeaturesProps[] = [
     icon: "goal",
     title: "Targeted Content",
     description:
-      "We create focused content that speaks to your audience, highlights your value, and guides users toward meaningful action.",
+      "Focused content that speaks to your audience, highlights your value, and guides users toward meaningful action.",
   },
   {
     icon: "pictureInPicture",
     title: "Strong Visuals",
     description:
-      "We design bold visuals that capture attention, strengthen your brand identity, and make every digital experience more memorable.",
+      "Designing bold visuals that capture attention, strengthen your brand identity, and make every digital experience more memorable.",
   },
   {
     icon: "mousePointerClick",
     title: "Clear CTA",
     description:
-      "We create clear calls to action that guide visitors smoothly, encourage engagement, and turn interest into real business opportunities.",
+      "Clear calls to action that guide visitors smoothly, encourage engagement, and turn interest into real business opportunities.",
   },
   {
     icon: "newspaper",
     title: "Clear Headline",
     description:
-      "We craft clear headlines that capture attention, communicate your value quickly, and help visitors understand your message instantly.",
+      "Crafting clear headlines that capture attention, communicate your value quickly, and help visitors understand your message instantly.",
   },
 ];
 
