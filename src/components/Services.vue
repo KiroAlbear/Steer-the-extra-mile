@@ -23,23 +23,23 @@ const serviceList: ServiceProps[] = [
   {
     title: "Custom Domain Integration",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      "Connect your system to a custom domain that makes your brand look professional, trusted, and easy to find.",
     pro: 0,
   },
   {
     title: "Social Media Integrations",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
+      "Link your system to social media platforms and create a stronger connection between your brand and your audience.",
     pro: 0,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
+    title: "AI Integrations",
+    description: "Add AI features to your system to automate tasks, improve support, and create smarter user experiences.",
     pro: 0,
   },
   {
     title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    description: "Improve your system visibility with SEO-friendly structure, optimized content, and pages built to rank better online.",
     pro: 1,
   },
 ];
@@ -58,8 +58,7 @@ const serviceList: ServiceProps[] = [
       Grow Your Business
     </h2>
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      From marketing and sales to operations and strategy, we have the expertise
-      to help you achieve your goals.
+      From websites to business systems, we build digital solutions that help you improve performance and achieve your goals.
     </h3>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
