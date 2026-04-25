@@ -24,7 +24,7 @@ import AnimatedBackground from "./components/ui/animation/AnimatedBackground.vue
       <Navbar />
       <Hero />
       <Sponsors />
-      <Benefits />
+      <!-- <Benefits /> -->
       <Features />
       <Services />
       <HowItWorks />

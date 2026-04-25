@@ -23,37 +23,38 @@ const featureList: FeaturesProps[] = [
     icon: "tabletSmartphone",
     title: "Mobile Friendly",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+    "We build responsive solutions that look sharp, load smoothly, and work perfectly across phones, tablets, and desktops."
+      // "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
   },
   {
     icon: "badgeCheck",
     title: "Social Proof",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Trusted by growing businesses, our solutions help teams improve performance, simplify operations, and move forward with confidence.",
   },
   {
     icon: "goal",
     title: "Targeted Content",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "We create focused content that speaks to your audience, highlights your value, and guides users toward meaningful action.",
   },
   {
     icon: "pictureInPicture",
     title: "Strong Visuals",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "We design bold visuals that capture attention, strengthen your brand identity, and make every digital experience more memorable.",
   },
   {
     icon: "mousePointerClick",
     title: "Clear CTA",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "We create clear calls to action that guide visitors smoothly, encourage engagement, and turn interest into real business opportunities.",
   },
   {
     icon: "newspaper",
     title: "Clear Headline",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "We craft clear headlines that capture attention, communicate your value quickly, and help visitors understand your message instantly.",
   },
 ];
 
@@ -93,9 +94,8 @@ const iconMap: Record<
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      We go beyond standard software delivery by combining smart strategy,
+      clean design, and reliable development to create solutions that truly support business growth and long-term success.
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
