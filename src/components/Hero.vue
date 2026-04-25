@@ -17,33 +17,34 @@ import { ArrowRight } from "lucide-vue-next";
           variant="outline"
           class="text-sm py-2"
         >
-          <span class="mr-2 text-primary">
+          <!-- <span class="mr-2 text-primary">
             <Badge>New</Badge>
           </span>
-          <span> Design is out now! </span>
+          <span> Design is out now! </span> -->
         </Badge>
 
         <div
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
-            Experience the
+            Launch Your Next
             <span
               class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
-              >Shadcn/Vue
+              > Software Product
             </span>
-            landing page
+          
           </h1>
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          We're more than just a tool, we're a community of passionate creators.
-          Get access to exclusive resources, tutorials, and support.
+          We don’t just create software solutions, we create opportunities.
+          <br />
+          Build smarter and solve challenges with confidence.
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">
           <Button class="w-5/6 md:w-1/4 font-bold group/arrow">
-            Get Started
+            Contact us
             <ArrowRight
               class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
             />
