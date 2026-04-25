@@ -74,12 +74,12 @@ const serviceList: ServiceProps[] = [
             <CardTitle>{{ title }}</CardTitle>
             <CardDescription>{{ description }}</CardDescription>
           </CardHeader>
-          <Badge
+          <!-- <Badge
             v-if="pro === ProService.YES"
             variant="secondary"
             class="absolute -top-2 -right-3"
             >PRO</Badge
-          >
+          > -->
         </Card>
       </div>
     </div>
