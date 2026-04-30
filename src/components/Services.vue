@@ -6,8 +6,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Badge } from "@/components/ui/badge";
-
 enum ProService {
   YES = 1,
   NO = 0,
@@ -66,7 +64,7 @@ const serviceList: ServiceProps[] = [
       class="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-[60%] mx-auto"
     >
       <div
-        v-for="{ title, description, pro } in serviceList"
+        v-for="{ title, description } in serviceList"
         :key="title"
       >
         <Card class="bg-muted/60 dark:bg-card h-full relative">
