@@ -146,7 +146,7 @@ import Separator from "./ui/separator/Separator.vue";
         </div>
       </div>
 
-      <Separator class="my-6" />
+      <!-- <Separator class="my-6" />
       <section className="">
         <h3 class="">
           &copy; 2024 Designed and developed by
@@ -158,7 +158,7 @@ import Separator from "./ui/separator/Separator.vue";
             Leo Miranda
           </a>
         </h3>
-      </section>
+      </section> -->
     </div>
   </footer>
 </template>

@@ -47,7 +47,7 @@ import greatTeamImage from "@/assets/great_team.png";
             />
           </Button>
 
-          <Button
+          <!-- <Button
             as-child
             variant="secondary"
             class="w-5/6 md:w-auto md:px-8 font-bold"
@@ -57,7 +57,7 @@ import greatTeamImage from "@/assets/great_team.png";
               target="_blank"
               >Github respository</a
             >
-          </Button>
+          </Button> -->
         </div>
       </div>
 

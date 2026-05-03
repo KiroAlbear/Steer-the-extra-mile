@@ -14,32 +14,32 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free Shadcn/Vue template.",
+    question: "What services does Steer the Extra Mile provide?",
+    answer: "We provide tailored software solutions including website development, mobile applications, automation tools, AI integrations, system integrations, and digital solutions designed to help businesses grow efficiently.",
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: "Can you build a custom solution for my business?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Yes. We analyze your business needs, workflow, and goals, then design and develop a custom solution that fits your exact requirements instead of offering a one-size-fits-all product.",
     value: "item-2",
   },
   {
     question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+      "Do you offer support after launching the project?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+      "Yes. We provide post-launch support, maintenance, performance improvements, bug fixes, and future updates to make sure your solution continues to run smoothly.",
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "How long does it take to complete a project?",
+    answer: "The timeline depends on the project size, features, and complexity. A simple website may take a short time, while larger platforms or custom systems require more planning, development, and testing.",
     value: "item-4",
   },
   {
     question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+      "Can you integrate AI or third-party tools into my website or app?",
+    answer: "Yes. We can integrate AI features, payment gateways, CRM systems, email marketing tools, social media platforms, analytics tools, and other third-party services based on your business needs.",
     value: "item-5",
   },
 ];
