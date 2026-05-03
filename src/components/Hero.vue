@@ -40,11 +40,16 @@ import greatTeamImage from "@/assets/great_team.png";
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">
-          <Button class="w-5/6 md:w-auto md:px-8 font-bold group/arrow">
-            Contact us
-            <ArrowRight
-              class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
-            />
+          <Button
+            as-child
+            class="w-5/6 md:w-auto md:px-6 font-bold gap-2 group/arrow"
+          >
+            <a href="#contact">
+              <span>Contact us</span>
+              <ArrowRight
+                class="size-5 shrink-0 group-hover/arrow:translate-x-1 transition-transform"
+              />
+            </a>
           </Button>
 
           <!-- <Button
