@@ -10,11 +10,12 @@ import {
 import LinkedInIcon from "@/icons/LinkedInIcon.vue";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import XIcon from "@/icons/XIcon.vue";
-import maroProfile from "@/assets/maro_profile.jpeg";
+import maximusProfile from "@/assets/maximus_profile.jpeg";
 import polaProfile from "@/assets/pola_profile.jpeg";
 import kirolosProfile from "@/assets/kirolos_profile.jpg";
 import mavieProfile from "@/assets/mavie_profile.jpeg";
-import tonyProfile from "@/assets/tony_profile.jpeg";
+import antoniousProfile from "@/assets/antonious_profile.jpeg";
+import beshoyProfile from "@/assets/beshoy_profile.jpg";
 
 
 interface TeamProps {
@@ -32,7 +33,7 @@ interface SocialNetworkProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: maroProfile,
+    imageUrl: maximusProfile,
     firstName: "Maximus",
     lastName: "Giovanni",
     positions: ["CEO", "Industrial Engineer"],
@@ -72,7 +73,7 @@ const teamList: TeamProps[] = [
   },
     {
     imageUrl:
-      tonyProfile,
+      antoniousProfile,
     firstName: "Antonious",
     lastName: "Zakher",
     positions: ["Software Engineer","Senior Backend Developer"],
@@ -80,6 +81,19 @@ const teamList: TeamProps[] = [
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/antonious-isaac/",
+      },
+    ],
+  },
+      {
+    imageUrl:
+      beshoyProfile,
+    firstName: "Beshoy",
+    lastName: "Rafaat",
+    positions: ["Finance Manager"],
+    socialNetworks: [
+      {
+        name: "LinkedIn",
+        url: "#",
       },
     ],
   },
