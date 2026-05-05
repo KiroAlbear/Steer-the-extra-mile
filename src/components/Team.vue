@@ -14,6 +14,7 @@ import maroProfile from "@/assets/maro_profile.jpeg";
 import polaProfile from "@/assets/pola_profile.jpeg";
 import kirolosProfile from "@/assets/kirolos_profile.jpg";
 import mavieProfile from "@/assets/mavie_profile.jpeg";
+import tonyProfile from "@/assets/tony_profile.jpeg";
 
 
 interface TeamProps {
@@ -47,7 +48,7 @@ const teamList: TeamProps[] = [
       kirolosProfile,
     firstName: "Kirolos",
     lastName: "Fouad",
-    positions: ["Software Engineer", "Mobile Developer"],
+    positions: ["Software Engineer", "Senior Mobile Developer"],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -69,6 +70,19 @@ const teamList: TeamProps[] = [
   
     ],
   },
+    {
+    imageUrl:
+      tonyProfile,
+    firstName: "Antonious",
+    lastName: "Zakher",
+    positions: ["Software Engineer","Senior Backend Developer"],
+    socialNetworks: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/antonious-isaac/",
+      },
+    ],
+  },
   {
     imageUrl:
       mavieProfile,
@@ -80,16 +94,9 @@ const teamList: TeamProps[] = [
         name: "LinkedIn",
         url: "#",
       },
-      // {
-      //   name: "Github",
-      //   url: "https://github.com/leoMirandaa",
-      // },
-      // {
-      //   name: "X",
-      //   url: "https://x.com/leo_mirand4",
-      // },
     ],
   },
+
   // {
   //   imageUrl:
   //     "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
