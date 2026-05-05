@@ -10,6 +10,11 @@ import {
 import LinkedInIcon from "@/icons/LinkedInIcon.vue";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import XIcon from "@/icons/XIcon.vue";
+import maroProfile from "@/assets/maro_profile.jpeg";
+import polaProfile from "@/assets/pola_profile.jpeg";
+import kirolosProfile from "@/assets/kirolos_profile.jpg";
+import mavieProfile from "@/assets/mavie_profile.jpeg";
+
 
 interface TeamProps {
   imageUrl: string;
@@ -26,62 +31,47 @@ interface SocialNetworkProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/250?img=58",
-    firstName: "Leo",
-    lastName: "Miranda",
-    positions: ["Vue Fronted Developer", "Creator Of This Website"],
+    imageUrl: maroProfile,
+    firstName: "Maximus",
+    lastName: "Giovanni",
+    positions: ["CEO", "Industrial Engineer"],
     socialNetworks: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
+        url: "https://www.linkedin.com",
       },
     ],
   },
   {
     imageUrl:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Elizabeth",
-    lastName: "Moore",
-    positions: ["UI/UX Designer"],
+      kirolosProfile,
+    firstName: "Kirolos",
+    lastName: "Fouad",
+    positions: ["Software Engineer", "Mobile Developer"],
     socialNetworks: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
+        url: "https://www.linkedin.com/in/kirolos-fouad-1b518911b/",
       },
     ],
   },
   {
     imageUrl:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "David",
-    lastName: "Diaz",
-    positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
+      polaProfile,
+    firstName: "Pola",
+    lastName: "Rasmy",
+    positions: ["Creative Director","Tourism Ambassador "],
     socialNetworks: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        url: "https://www.linkedin.com/in/polarasmy/",
       },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
+  
     ],
   },
   {
     imageUrl:
-      "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      mavieProfile,
     firstName: "Sarah",
     lastName: "Robinson",
     positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
@@ -90,80 +80,80 @@ const teamList: TeamProps[] = [
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/leopoldo-miranda/",
       },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
+      // {
+      //   name: "Github",
+      //   url: "https://github.com/leoMirandaa",
+      // },
+      // {
+      //   name: "X",
+      //   url: "https://x.com/leo_mirand4",
+      // },
     ],
   },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Michael",
-    lastName: "Holland",
-    positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-    ],
-  },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Zoe",
-    lastName: "Garcia",
-    positions: ["JavaScript Evangelist", "Deno Champion"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-    ],
-  },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Evan",
-    lastName: "James",
-    positions: ["Backend Developer"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
-  },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Pam",
-    lastName: "Taylor",
-    positions: ["Fullstack developer", "UX Researcher"],
-    socialNetworks: [
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
-  },
+  // {
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   firstName: "Michael",
+  //   lastName: "Holland",
+  //   positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
+  //   socialNetworks: [
+  //     {
+  //       name: "LinkedIn",
+  //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
+  //     },
+  //   ],
+  // },
+  // {
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   firstName: "Zoe",
+  //   lastName: "Garcia",
+  //   positions: ["JavaScript Evangelist", "Deno Champion"],
+  //   socialNetworks: [
+  //     {
+  //       name: "LinkedIn",
+  //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
+  //     },
+  //     {
+  //       name: "Github",
+  //       url: "https://github.com/leoMirandaa",
+  //     },
+  //   ],
+  // },
+  // {
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   firstName: "Evan",
+  //   lastName: "James",
+  //   positions: ["Backend Developer"],
+  //   socialNetworks: [
+  //     {
+  //       name: "LinkedIn",
+  //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
+  //     },
+  //     {
+  //       name: "Github",
+  //       url: "https://github.com/leoMirandaa",
+  //     },
+  //     {
+  //       name: "X",
+  //       url: "https://x.com/leo_mirand4",
+  //     },
+  //   ],
+  // },
+  // {
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   firstName: "Pam",
+  //   lastName: "Taylor",
+  //   positions: ["Fullstack developer", "UX Researcher"],
+  //   socialNetworks: [
+  //     {
+  //       name: "X",
+  //       url: "https://x.com/leo_mirand4",
+  //     },
+  //   ],
+  // },
 ];
 
 const socialIcon = (socialName: string) => {
