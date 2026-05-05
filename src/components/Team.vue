@@ -38,7 +38,7 @@ const teamList: TeamProps[] = [
     socialNetworks: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com",
+        url: "#",
       },
     ],
   },
@@ -72,13 +72,13 @@ const teamList: TeamProps[] = [
   {
     imageUrl:
       mavieProfile,
-    firstName: "Sarah",
-    lastName: "Robinson",
-    positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
+    firstName: "Mavie",
+    lastName: "Safwat",
+    positions: ["Content Creator"],
     socialNetworks: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        url: "#",
       },
       // {
       //   name: "Github",
@@ -227,7 +227,8 @@ const socialIcon = (socialName: string) => {
             v-for="{ name, url } in socialNetworks"
             key="name"
             :href="url"
-            target="_blank"
+            :target="url === '#' ? undefined : '_blank'"
+            @click="url === '#' && $event.preventDefault()"
             class="hover:opacity-80 transition-all"
             :aria-label="`Visit our ${name} page`"
           >
