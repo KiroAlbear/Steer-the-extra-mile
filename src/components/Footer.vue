@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronsDown } from "lucide-vue-next";
+import logo from "@/assets/logo.png";
 import Separator from "./ui/separator/Separator.vue";
 </script>
 
@@ -17,11 +17,13 @@ import Separator from "./ui/separator/Separator.vue";
             href="#"
             class="flex font-bold items-center"
           >
-            <ChevronsDown
-              class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+            <img
+              :src="logo"
+              alt="ShadcnVue logo"
+              class="mr-2 h-12 w-auto rounded-lg object-contain"
             />
 
-            <h3 class="text-2xl">Shadcn-Vue</h3>
+            <!-- <h3 class="text-2xl">Shadcn-Vue</h3> -->
           </a>
         </div>
 
@@ -31,6 +33,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Github
             </a>
@@ -40,6 +43,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Twitter
             </a>
@@ -49,6 +53,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Instagram
             </a>
@@ -61,6 +66,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               iOS
             </a>
@@ -70,6 +76,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Android
             </a>
@@ -79,6 +86,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Web
             </a>
@@ -89,7 +97,7 @@ import Separator from "./ui/separator/Separator.vue";
           <h3 class="font-bold text-lg">Help</h3>
           <div>
             <a
-              href="#"
+              href="#contact"
               class="opacity-60 hover:opacity-100"
             >
               Contact Us
@@ -98,7 +106,7 @@ import Separator from "./ui/separator/Separator.vue";
 
           <div>
             <a
-              href="#"
+              href="#faq"
               class="opacity-60 hover:opacity-100"
             >
               FAQ
@@ -109,6 +117,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Feedback
             </a>
@@ -120,7 +129,8 @@ import Separator from "./ui/separator/Separator.vue";
           <div>
             <a
               href="#"
-              class="opacity-60 hover:opacity-100"
+              class="opacity-60 hover:opacity-100"\
+              @click.prevent
             >
               Twitch
             </a>
@@ -130,6 +140,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
+              @click.prevent
             >
               Discord
             </a>
@@ -139,7 +150,7 @@ import Separator from "./ui/separator/Separator.vue";
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
-            >
+              @click.prevent>
               Dribbble
             </a>
           </div>
