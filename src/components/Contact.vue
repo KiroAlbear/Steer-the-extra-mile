@@ -34,14 +34,85 @@ const contactForm = reactive<ContactFormeProps>({
 });
 
 const invalidInputForm = ref<boolean>(false);
+const isSubmitting = ref<boolean>(false);
+const submitStatus = ref<"idle" | "success" | "error">("idle");
+const submitErrorMessage = ref<string>("");
 
-const handleSubmit = () => {
+const contactEmail =
+  import.meta.env.VITE_CONTACT_EMAIL || "leomirandadev@gmail.com";
+const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+const resetForm = () => {
+  contactForm.firstName = "";
+  contactForm.lastName = "";
+  contactForm.email = "";
+  contactForm.subject = "Web Development";
+  contactForm.message = "";
+};
+
+const handleSubmit = async () => {
   const { firstName, lastName, email, subject, message } = contactForm;
-  console.log(contactForm);
 
-  const mailToLink = `mailto:leomirandadev@gmail.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
+  if (!firstName || !lastName || !email || !subject || !message) {
+    invalidInputForm.value = true;
+    return;
+  }
 
-  window.location.href = mailToLink;
+  invalidInputForm.value = false;
+  submitStatus.value = "idle";
+  submitErrorMessage.value = "";
+
+  if (!emailServiceId || !emailTemplateId || !emailPublicKey) {
+    submitStatus.value = "error";
+    submitErrorMessage.value =
+      "Missing EmailJS settings. Add them to .env.local, then restart the dev server.";
+    return;
+  }
+
+  isSubmitting.value = true;
+
+  try {
+    const response = await fetch(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          service_id: emailServiceId,
+          template_id: emailTemplateId,
+          user_id: emailPublicKey,
+          template_params: {
+            to_email: contactEmail,
+            from_name: `${firstName} ${lastName}`,
+            from_email: email,
+            subject,
+            message,
+          },
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      throw new Error(errorText || "Email service rejected the request.");
+    }
+
+    submitStatus.value = "success";
+    resetForm();
+  } catch (error) {
+    submitStatus.value = "error";
+    submitErrorMessage.value =
+      error instanceof Error
+        ? error.message
+        : "Please check the email service settings and try again.";
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
@@ -87,7 +158,7 @@ const handleSubmit = () => {
               <div class="font-bold">Mail Us</div>
             </div>
 
-            <div>leomirandadev@gmail.com</div>
+            <div>{{ contactEmail }}</div>
           </div>
 
           <div>
@@ -120,6 +191,7 @@ const handleSubmit = () => {
                   type="text"
                   placeholder="Leopoldo"
                   v-model="contactForm.firstName"
+                  required
                 />
               </div>
 
@@ -130,6 +202,7 @@ const handleSubmit = () => {
                   type="text"
                   placeholder="Miranda"
                   v-model="contactForm.lastName"
+                  required
                 />
               </div>
             </div>
@@ -141,6 +214,7 @@ const handleSubmit = () => {
                 type="email"
                 placeholder="leomirandadev@gmail.com"
                 v-model="contactForm.email"
+                required
               />
             </div>
 
@@ -176,6 +250,7 @@ const handleSubmit = () => {
                 placeholder="Your message..."
                 rows="5"
                 v-model="contactForm.message"
+                required
               />
             </div>
 
@@ -190,7 +265,31 @@ const handleSubmit = () => {
               </AlertDescription>
             </Alert>
 
-            <Button class="mt-4">Send message</Button>
+            <Alert v-if="submitStatus === 'success'">
+              <Mail class="w-4 h-4" />
+              <AlertTitle>Message sent</AlertTitle>
+              <AlertDescription>
+                Thank you. We received your message and will contact you soon.
+              </AlertDescription>
+            </Alert>
+
+            <Alert
+              v-if="submitStatus === 'error'"
+              variant="destructive"
+            >
+              <AlertCircle class="w-4 h-4" />
+              <AlertTitle>Message not sent</AlertTitle>
+              <AlertDescription>
+                {{ submitErrorMessage }}
+              </AlertDescription>
+            </Alert>
+
+            <Button
+              class="mt-4"
+              :disabled="isSubmitting"
+            >
+              {{ isSubmitting ? "Sending..." : "Send message" }}
+            </Button>
           </form>
         </CardContent>
 
