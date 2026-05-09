@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import logo from "@/assets/logo.png";
-import Separator from "./ui/separator/Separator.vue";
 </script>
 
 <template>
@@ -129,7 +128,7 @@ import Separator from "./ui/separator/Separator.vue";
           <div>
             <a
               href="#"
-              class="opacity-60 hover:opacity-100"\
+              class="opacity-60 hover:opacity-100"
               @click.prevent
             >
               Twitch
