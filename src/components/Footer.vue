@@ -12,10 +12,7 @@ import logo from "@/assets/logo.png";
         class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
       >
         <div class="col-span-full xl:col-span-2">
-          <a
-            href="#"
-            class="flex font-bold items-center"
-          >
+          <div class="flex font-bold items-center">
             <img
               :src="logo"
               alt="ShadcnVue logo"
@@ -23,7 +20,7 @@ import logo from "@/assets/logo.png";
             />
 
             <!-- <h3 class="text-2xl">Shadcn-Vue</h3> -->
-          </a>
+          </div>
         </div>
 
         <div class="flex flex-col gap-2">

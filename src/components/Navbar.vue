@@ -99,16 +99,13 @@ const navigateFromMobileMenu = (href: string) => {
       'w-[90%] md:w-[82%] lg:w-[90%] xl:w-[80%] 2xl:w-[70%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex lg:grid lg:grid-cols-[12rem_1fr_12rem] justify-between items-center py-0 px-3 sm:px-4 lg:px-5 bg-card shadow-md': true,
     }"
   >
-    <a
-      href="/"
-      class="font-bold text-lg flex items-center lg:justify-self-start"
-    >
+    <div class="font-bold text-lg flex items-center lg:justify-self-start">
       <img
         :src="logo"
         alt="ShadcnVue logo"
         class="mr-4 h-20 w-40 lg:w-44 xl:w-48 rounded-lg object-contain"
       />
-      </a>
+    </div>
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
       <Sheet v-model:open="isOpen">
@@ -129,19 +126,13 @@ const navigateFromMobileMenu = (href: string) => {
           @close-auto-focus.prevent
         >
           <div>
-            <SheetHeader class="mb-6">
+            <SheetHeader class="mb-6 px-4 text-left">
               <SheetTitle class="flex items-center">
-                <a
-                  href="/"
-                  class="flex items-center"
-                  @click="isOpen = false"
-                >
-                  <img
-                    :src="logo"
-                    alt="ShadcnVue logo"
-                    class="h-16 w-40 rounded-lg object-contain"
-                  />
-                </a>
+                <img
+                  :src="logo"
+                  alt="ShadcnVue logo"
+                  class="h-16 w-40 rounded-lg object-contain"
+                />
               </SheetTitle>
             </SheetHeader>
 
@@ -165,7 +156,7 @@ const navigateFromMobileMenu = (href: string) => {
           <Button
             as-child
             size="lg"
-            class="w-full"
+            class="mx-4 w-[calc(100%-2rem)]"
           >
             <a
               href="#contact"
