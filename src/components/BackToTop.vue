@@ -29,22 +29,19 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Transition
-    enter-active-class="transition duration-200 ease-out"
-    enter-from-class="translate-y-3 opacity-0"
-    enter-to-class="translate-y-0 opacity-100"
-    leave-active-class="transition duration-150 ease-in"
-    leave-from-class="translate-y-0 opacity-100"
-    leave-to-class="translate-y-3 opacity-0"
+  <Button
+    size="icon"
+    class="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full shadow-lg transition-all duration-300 ease-out sm:bottom-8 sm:right-8"
+    :class="
+      isVisible
+        ? 'pointer-events-auto translate-y-0 scale-100 opacity-100'
+        : 'pointer-events-none translate-y-4 scale-75 opacity-0'
+    "
+    aria-label="Back to top"
+    :aria-hidden="!isVisible"
+    :tabindex="isVisible ? 0 : -1"
+    @click="scrollToTop"
   >
-    <Button
-      v-if="isVisible"
-      size="icon"
-      class="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full shadow-lg sm:bottom-8 sm:right-8"
-      aria-label="Back to top"
-      @click="scrollToTop"
-    >
-      <ArrowUp class="size-5" />
-    </Button>
-  </Transition>
+    <ArrowUp class="size-5" />
+  </Button>
 </template>

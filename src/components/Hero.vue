@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
 import greatTeamImage from "@/assets/great_team.png";
@@ -11,15 +10,15 @@ import greatTeamImage from "@/assets/great_team.png";
       class="grid items-center lg:grid-cols-2 lg:max-w-screen-xl gap-12 mx-auto py-20 md:py-32"
     >
       <div class="text-center lg:text-left space-y-8">
-        <Badge
+        <!-- <Badge
           variant="outline"
           class="text-sm py-2"
-        >
+        > -->
           <!-- <span class="mr-2 text-primary">
             <Badge>New</Badge>
           </span>
           <span> Design is out now! </span> -->
-        </Badge>
+        <!-- </Badge> -->
 
         <div
           class="max-w-screen-sm mx-auto lg:mx-0 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-normal"
