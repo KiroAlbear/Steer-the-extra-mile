@@ -5,8 +5,6 @@ import Features from "./components/Features.vue";
 import Services from "./components/Services.vue";
 import Sponsors from "./components/Sponsors.vue";
 import Team from "./components/Team.vue";
-import Pricing from "./components/Pricing.vue";
-import Community from "./components/Community.vue";
 import Contact from "./components/Contact.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
