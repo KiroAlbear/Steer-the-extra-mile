@@ -84,7 +84,7 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[86%] md:w-[68%] lg:w-[60%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center py-3 px-7 md:px-7 bg-card shadow-md': true,
+      'w-[86%] md:w-[68%] lg:w-[60%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center py-0 px-4 md:px- bg-card shadow-md': true,
     }"
   >
     <a
@@ -94,7 +94,7 @@ const isOpen = ref<boolean>(false);
       <img
         :src="logo"
         alt="ShadcnVue logo"
-        class="mr-2 h-11 w-auto rounded-lg object-contain"
+        class="mr-4 h-21 w-48 rounded-lg object-contain"
       />
       </a>
     <!-- Mobile -->
