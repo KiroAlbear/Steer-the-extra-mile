@@ -8,6 +8,7 @@ import Team from "./components/Team.vue";
 import Contact from "./components/Contact.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
+import BackToTop from "./components/BackToTop.vue";
 import AnimatedBackground from "./components/ui/animation/AnimatedBackground.vue";
 </script>
 
@@ -31,5 +32,6 @@ import AnimatedBackground from "./components/ui/animation/AnimatedBackground.vue
       <FAQ />
       <Footer />
     </div>
+    <BackToTop />
   </div>
 </template>
