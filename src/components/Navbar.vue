@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { nextTick, ref, type Component } from "vue";
 
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
@@ -22,37 +22,73 @@ import {
 
 import { Button } from "@/components/ui/button";
 
-import { Menu } from "lucide-vue-next";
+import {
+  Briefcase,
+  CircleHelp,
+  Mail,
+  Menu,
+  Rocket,
+  Sparkles,
+  Users,
+} from "lucide-vue-next";
 
 interface RouteProps {
   href: string;
   label: string;
+  icon: Component;
 }
 
 const routeList: RouteProps[] = [
   {
     href: "#features",
     label: "Features",
+    icon: Sparkles,
   },
   {
     href: "#services",
     label: "Services",
+    icon: Briefcase,
   },
   {
     href: "#team",
     label: "Team",
+    icon: Users,
   },
   {
     href: "#contact",
     label: "Contact",
+    icon: Mail,
   },
   {
     href: "#faq",
     label: "FAQ",
+    icon: CircleHelp,
   },
 ];
 
 const isOpen = ref<boolean>(false);
+
+const navigateFromMobileMenu = (href: string) => {
+  isOpen.value = false;
+
+  nextTick(() => {
+    const target = document.getElementById(href.replace("#", ""));
+
+    if (!target) return;
+
+    const headerOffset = 96;
+    const targetTop =
+      target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+    window.history.pushState(null, "", href);
+  });
+};
 </script>
 
 <template>
@@ -77,49 +113,68 @@ const isOpen = ref<boolean>(false);
     <div class="flex items-center lg:hidden">
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
-          <Menu
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label="Open navigation menu"
             @click="isOpen = true"
-            class="cursor-pointer"
-          />
+          >
+            <Menu class="size-5" />
+          </Button>
         </SheetTrigger>
 
         <SheetContent
           side="left"
           class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
+          @close-auto-focus.prevent
         >
           <div>
-            <SheetHeader class="mb-4 ml-4">
+            <SheetHeader class="mb-6">
               <SheetTitle class="flex items-center">
                 <a
                   href="/"
                   class="flex items-center"
+                  @click="isOpen = false"
                 >
                   <img
                     :src="logo"
                     alt="ShadcnVue logo"
-                    class="mr-2 h-20 w-auto rounded-lg object-contain"
+                    class="h-16 w-40 rounded-lg object-contain"
                   />
                 </a>
               </SheetTitle>
             </SheetHeader>
 
-            <div class="flex flex-col gap-2">
-              <Button
-                v-for="{ href, label } in routeList"
+            <nav class="flex flex-col gap-2">
+              <a
+                v-for="{ href, label, icon } in routeList"
                 :key="label"
-                as-child
-                variant="ghost"
-                class="justify-start text-base"
+                :href="href"
+                class="flex h-12 items-center gap-3 rounded-md px-4 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                @click.prevent="navigateFromMobileMenu(href)"
               >
-                <a
-                  @click="isOpen = false"
-                  :href="href"
-                >
-                  {{ label }}
-                </a>
-              </Button>
-            </div>
+                <component
+                  :is="icon"
+                  class="size-5 shrink-0 text-primary"
+                />
+                {{ label }}
+              </a>
+            </nav>
           </div>
+
+          <Button
+            as-child
+            size="lg"
+            class="w-full"
+          >
+            <a
+              href="#contact"
+              @click.prevent="navigateFromMobileMenu('#contact')"
+            >
+              <Rocket class="mr-2 size-5" />
+              Start a Project
+            </a>
+          </Button>
         </SheetContent>
       </Sheet>
     </div>
