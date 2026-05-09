@@ -8,42 +8,35 @@ import logo from "@/assets/logo.png";
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 
 import { Menu } from "lucide-vue-next";
-import GithubIcon from "@/icons/GithubIcon.vue";
-import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
   href: string;
   label: string;
 }
 
-interface FeatureProps {
-  title: string;
-  description: string;
-}
-
 const routeList: RouteProps[] = [
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#features",
+    label: "Features",
+  },
+  {
+    href: "#services",
+    label: "Services",
   },
   {
     href: "#team",
@@ -59,23 +52,6 @@ const routeList: RouteProps[] = [
   },
 ];
 
-const featureList: FeatureProps[] = [
-  {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
-  },
-  {
-    title: "Capture Leads",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
-  },
-];
-
 const isOpen = ref<boolean>(false);
 </script>
 
@@ -84,17 +60,17 @@ const isOpen = ref<boolean>(false);
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[86%] md:w-[68%] lg:w-[60%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center py-0 px-4 md:px- bg-card shadow-md': true,
+      'w-[90%] md:w-[82%] lg:w-[90%] xl:w-[80%] 2xl:w-[70%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex lg:grid lg:grid-cols-[12rem_1fr_12rem] justify-between items-center py-0 px-3 sm:px-4 lg:px-5 bg-card shadow-md': true,
     }"
   >
     <a
       href="/"
-      class="font-bold text-lg flex items-center"
+      class="font-bold text-lg flex items-center lg:justify-self-start"
     >
       <img
         :src="logo"
         alt="ShadcnVue logo"
-        class="mr-4 h-21 w-48 rounded-lg object-contain"
+        class="mr-4 h-20 w-40 lg:w-44 xl:w-48 rounded-lg object-contain"
       />
       </a>
     <!-- Mobile -->
@@ -123,7 +99,6 @@ const isOpen = ref<boolean>(false);
                     alt="ShadcnVue logo"
                     class="mr-2 h-20 w-auto rounded-lg object-contain"
                   />
-                  ShadcnVue
                 </a>
               </SheetTitle>
             </SheetHeader>
@@ -145,48 +120,13 @@ const isOpen = ref<boolean>(false);
               </Button>
             </div>
           </div>
-
-          <SheetFooter class="flex-col sm:flex-col justify-start items-start">
-            <Separator class="mb-2" />
-
-            <ToggleTheme />
-          </SheetFooter>
         </SheetContent>
       </Sheet>
     </div>
 
     <!-- Desktop -->
-    <NavigationMenu class="hidden lg:block">
+    <NavigationMenu class="hidden lg:flex justify-self-center">
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">
-            Features
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img
-                src="https://www.radix-vue.com/logo.svg"
-                alt="Beach"
-                class="h-full w-full rounded-md object-cover"
-              />
-              <ul class="flex flex-col gap-2">
-                <li
-                  v-for="{ title, description } in featureList"
-                  :key="title"
-                  class="rounded-md p-3 text-sm hover:bg-muted"
-                >
-                  <p class="mb-1 font-semibold leading-none text-foreground">
-                    {{ title }}
-                  </p>
-                  <p class="line-clamp-2 text-muted-foreground">
-                    {{ description }}
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Button
@@ -205,24 +145,14 @@ const isOpen = ref<boolean>(false);
       </NavigationMenuList>
     </NavigationMenu>
 
-    <div class="hidden lg:flex">
-      <!-- <ToggleTheme /> -->
-
-      <Button
-        as-child
-        size="sm"
-        variant="ghost"
-        aria-label="View on GitHub"
-      >
-        <a
-          aria-label="View on GitHub"
-          href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
-          target="_blank"
-        >
-          <GithubIcon class="size-5" />
-        </a>
-      </Button>
-    </div>
+    <Button
+      as-child
+      class="hidden lg:inline-flex justify-self-end whitespace-nowrap"
+    >
+      <a href="#contact">
+        Start a Project
+      </a>
+    </Button>
   </header>
 </template>
 
