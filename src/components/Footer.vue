@@ -12,11 +12,11 @@ import logo from "@/assets/logo.png";
         class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
       >
         <div class="col-span-full xl:col-span-2">
-          <div class="flex font-bold items-center">
+          <div class="flex justify-center font-bold items-center md:justify-start">
             <img
               :src="logo"
               alt="ShadcnVue logo"
-              class="mr-2 h-12 w-auto rounded-lg object-contain"
+              class="h-16 w-40 rounded-lg object-contain sm:w-44"
             />
 
             <!-- <h3 class="text-2xl">Shadcn-Vue</h3> -->
