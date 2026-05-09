@@ -129,8 +129,7 @@ const handleSubmit = async () => {
           <h2 class="text-3xl md:text-4xl font-bold">Connect With Us</h2>
         </div>
         <p class="mb-8 text-muted-foreground lg:w-5/6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          ipsam sint enim exercitationem ex autem corrupti quas tenetur
+          Have a question or ready to start your next project? We’re here to help you move forward with confidence. Contact us today, and let’s discuss how our software solutions can support your business goals.
         </p>
 
         <div class="flex flex-col gap-4">
@@ -140,7 +139,7 @@ const handleSubmit = async () => {
               <div class="font-bold">Find Us</div>
             </div>
 
-            <div>742 Evergreen Terrace, Springfield, IL 62704</div>
+            <div>169 zokol dr, Aurora, Ontario, Canada, L4G0C4</div>
           </div>
 
           <div>
@@ -149,7 +148,7 @@ const handleSubmit = async () => {
               <div class="font-bold">Call Us</div>
             </div>
 
-            <div>+1 (619) 123-4567</div>
+            <div>+1 (647) 218-5753</div>
           </div>
 
           <div>
